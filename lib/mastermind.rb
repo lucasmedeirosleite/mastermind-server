@@ -1,8 +1,10 @@
 require "nexus"
 require "mongoid"
-require "mastermind/version"
+require "redis"
 
-Mongoid.load!("#{File.dirname(__FILE__)}/mastermind/config/mongoid.yml", :mastermind_config)
+Dir["#{File.dirname(__FILE__)}/mastermind/config/initializers/*.rb"].each { |f| require f }
+
+require "mastermind/version"
 
 module Mastermind
   

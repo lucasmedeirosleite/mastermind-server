@@ -1,0 +1,1 @@
+Mongoid.load!("#{File.dirname(__FILE__)}/../mongoid.yml", :mastermind_config)
