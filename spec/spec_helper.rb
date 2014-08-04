@@ -1,6 +1,4 @@
-Dir.glob("lib/**/*.rb").reverse.each do |file|
-	require file.gsub! 'lib/', ''
-end 
+require_relative "../../lib/mastermind" 
 
 require 'pry'
 
