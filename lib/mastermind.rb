@@ -1,5 +1,8 @@
 require "nexus"
+require "mongoid"
 require "mastermind/version"
+
+Mongoid.load!("#{File.dirname(__FILE__)}/mastermind/config/mongoid.yml", :mastermind_config)
 
 module Mastermind
   
