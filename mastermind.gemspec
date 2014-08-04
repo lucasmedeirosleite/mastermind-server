@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'mastermind/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "mastermind-server"
+  spec.name          = "mastermind"
   spec.version       = Mastermind::VERSION
   spec.authors       = ["Lucas Medeiros Leite"]
   spec.email         = ["lucastoc@gmail.com"]
@@ -18,7 +18,11 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "activesupport", "4.1.4"
+  spec.add_dependency "activemodel", "4.1.4"
   spec.add_dependency "json", "1.8.1"
+  spec.add_dependency "mongoid", "4.0.0"
+  spec.add_dependency "redis", "3.1.0"
 
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
