@@ -10,4 +10,10 @@ class Mastermind::Game
 	validates_presence_of :challenger, message: 'Desafiador é obrigatório'
 	validates_presence_of :guesser, message: 'Adivinhador é obrigatório'
 
+	before_create :create_chat
+
+	def create_chat
+		self.chat = Mastermind::Chat.new
+	end
+
 end

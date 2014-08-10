@@ -4,6 +4,7 @@ class Mastermind::Chat
 	include ActiveModel::Validations
 
 	embedded_in :game, class_name: 'Mastermind::Game'
-	embeds_many :messages, class_name: 'Mastermind::Message'
+	embeds_many :messages, class_name: 'Mastermind::Message', cascade_callbacks: true	
+	
 
 end
