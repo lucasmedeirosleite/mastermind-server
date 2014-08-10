@@ -4,5 +4,6 @@ class Mastermind::Chat
 	include ActiveModel::Validations
 
 	embedded_in :game, class_name: 'Mastermind::Game'
+	embeds_many :messages, class_name: 'Mastermind::Message'
 
 end
