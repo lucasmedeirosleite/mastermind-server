@@ -5,9 +5,9 @@ class Mastermind::Game
 
 	embeds_one :challenger, class_name: 'Mastermind::Player'
 	embeds_one :guesser, class_name: 'Mastermind::Player'
+	embeds_one :chat, class_name: 'Mastermind::Chat', cascade_callbacks: true	
 
 	validates_presence_of :challenger, message: 'Desafiador é obrigatório'
 	validates_presence_of :guesser, message: 'Adivinhador é obrigatório'
-
 
 end

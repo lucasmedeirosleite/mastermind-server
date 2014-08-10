@@ -1,4 +1,5 @@
 class Mastermind::Player
+	
 	include Mongoid::Document
 	include ActiveModel::Validations
 	
