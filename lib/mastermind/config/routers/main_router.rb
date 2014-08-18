@@ -1,7 +1,7 @@
 class Mastermind::MainRouter
 
 	def self.proccess(request)
-		binding.pry
+		"Mastermind::#{request.controller}".constantize.new.send(request.action, request.params)
 	end
 
 end

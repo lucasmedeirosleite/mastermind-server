@@ -1,7 +1,6 @@
 require "nexus"
 require "mongoid"
 require "redis"
-require 'pry'
 
 Dir["#{File.dirname(__FILE__)}/mastermind/config/initializers/*.rb"].each { |f| require f }
 Dir["#{File.dirname(__FILE__)}/mastermind/app/models/*.rb"].each { |f| require f }
