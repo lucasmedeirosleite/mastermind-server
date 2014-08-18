@@ -13,4 +13,10 @@ class Mastermind::Message
 
 	embedded_in :chat, class_name: 'Mastermind::Chat' 
 
+	def self.build_with_players(options = {})
+		from = Mastermind::Player.find(options[:from_id])
+		to = Mastermind::Player.find(options[:to_id])
+		self.new(from: from, to: to, text: options[:text])
+	end
+
 end

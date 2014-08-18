@@ -5,6 +5,10 @@ class Mastermind::Chat
 
 	embedded_in :game, class_name: 'Mastermind::Game'
 	embeds_many :messages, class_name: 'Mastermind::Message', cascade_callbacks: true	
-	
 
+	def talk(message)
+		self.messages << message
+		self.save
+	end
+	
 end
